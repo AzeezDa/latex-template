@@ -1,0 +1,59 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{template}[2024/11/18]
+
+\RequirePackage{graphicx} 
+\RequirePackage{parskip}
+\RequirePackage[style=ieee]{biblatex}
+\RequirePackage{hyperref}
+\RequirePackage{float}
+\RequirePackage{amsthm, amsfonts, amsmath, amssymb}
+\RequirePackage[nameinlink]{cleveref}
+\RequirePackage{algorithm}
+\RequirePackage[commentColor=darkgray]{algpseudocodex}
+\RequirePackage{subcaption}
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\round}{\text{round}}
+\newcommand{\prob}[1]{\mathbb{P}\left[#1\right]}
+\newcommand{\expect}[1]{\mathbb{E}\left[#1\right]}
+\newcommand{\false}{\mathtt{false}}
+\newcommand{\true}{\mathtt{true}}
+\newcommand{\alg}{\mathbf{Alg}}
+\newcommand{\opt}{\mathbf{Opt}}
+\newcommand{\ordo}[1]{\mathcal{O}\left(#1\right)}
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\paren}[1]{\left(#1\right)}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdfpagemode=FullScreen,
+}
+
+%% ENVIRONMENTS
+\newenvironment{algo}[1]
+    {\begin{algorithm}[H]
+    \caption{#1}
+    \begin{algorithmic}[1]
+    }
+    {\end{algorithmic}
+    \end{algorithm}
+    }
