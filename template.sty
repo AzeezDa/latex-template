@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{template}[2024/11/18]
+\ProvidesPackage{template}[2025/05/10]
 
 \RequirePackage{graphicx} 
 \RequirePackage{parskip}
@@ -13,20 +13,22 @@
 \RequirePackage{subcaption}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
+\RequirePackage{stmaryrd}
+
+\definecolor{ddgray}{gray}{0.2}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 \newtheorem{corollary}{Corollary}
-
-\theoremstyle{definition}
+\newtheorem{fact}{Fact}
 \newtheorem{definition}{Definition}
 \newtheorem{problem}{Problem}
 
 \newcommand{\real}{\mathbb{R}}
 \newcommand{\integers}{\mathbb{Z}}
 \newcommand{\naturals}{\mathbb{N}}
-\newcommand{\round}{\text{round}}
-\newcommand{\prob}[1]{\mathbb{P}\left[#1\right]}
+\newcommand{\round}{\textnormal{round}}
+\newcommand{\prob}[1]{\Pr\left[#1\right]}
 \newcommand{\expect}[1]{\mathbb{E}\left[#1\right]}
 \newcommand{\false}{\mathtt{false}}
 \newcommand{\true}{\mathtt{true}}
@@ -38,6 +40,20 @@
 \newcommand{\paren}[1]{\left(#1\right)}
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\argmin}{argmin}
+\newcommand{\sbrack}[1]{\left[#1\right]}
+\newcommand{\cbrack}[1]{\left\{#1\right\}}
+\newcommand{\bbrack}[1]{\llbracket {#1} \rrbracket}
+\newcommand{\comment}[1]{\cbrack{\textnormal{\color{ddgray}\scriptsize #1}}}
+\newcommand{\defeq}{\overset{\text{\normalfont \tiny def}}{=}}
+\newcommand{\powset}[1]{\mathcal{P}\!
+    \ifthenelse{\equal{#1}{}}
+    {}
+    \paren{#1}
+}
+\newcommand{\Z}{\integers}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\naturals}
+\newcommand{\R}{\real}
 
 \hypersetup{
     colorlinks=true,
