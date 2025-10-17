@@ -1,12 +1,13 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{template}[2025/05/10]
+\ProvidesPackage{template}[2025/10/17]
 
-\RequirePackage{graphicx} 
+\RequirePackage{graphicx}
 \RequirePackage{parskip}
 \RequirePackage[style=ieee]{biblatex}
-\RequirePackage{hyperref}
+\RequirePackage[pdfencoding=auto, psdextra]{hyperref}
 \RequirePackage{float}
 \RequirePackage{amsthm, amsfonts, amsmath, amssymb}
+\RequirePackage{bm}
 \RequirePackage[nameinlink]{cleveref}
 \RequirePackage{algorithm}
 \RequirePackage[commentColor=darkgray]{algpseudocodex}
@@ -23,6 +24,7 @@
 \newtheorem{fact}{Fact}
 \newtheorem{definition}{Definition}
 \newtheorem{problem}{Problem}
+\newtheorem{claim}{Claim}
 
 \newcommand{\real}{\mathbb{R}}
 \newcommand{\integers}{\mathbb{Z}}
@@ -43,8 +45,12 @@
 \newcommand{\sbrack}[1]{\left[#1\right]}
 \newcommand{\cbrack}[1]{\left\{#1\right\}}
 \newcommand{\bbrack}[1]{\llbracket {#1} \rrbracket}
+\newcommand{\vbrack}[1]{{\left\lvert {#1} \right\rvert}}
 \newcommand{\comment}[1]{\cbrack{\textnormal{\color{ddgray}\scriptsize #1}}}
 \newcommand{\defeq}{\overset{\text{\normalfont \tiny def}}{=}}
+\newcommand{\defiff}{\overset{\text{\normalfont \tiny def}}{\iff}}
+\newcommand{\deff}[1]{\overset{\text{\normalfont \tiny def}}{#1}}
+\newcommand{\oneto}[1]{\sbrack{#1}}
 \newcommand{\powset}[1]{\mathcal{P}\!
     \ifthenelse{\equal{#1}{}}
     {}
@@ -54,6 +60,8 @@
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\N}{\naturals}
 \newcommand{\R}{\real}
+\newcommand{\binary}{\cbrack{0, 1}}
+\newcommand{\given}{\;\middle|\;}
 
 \hypersetup{
     colorlinks=true,
